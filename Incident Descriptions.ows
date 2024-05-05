@@ -3,15 +3,17 @@
 	<nodes>
 		<node id="0" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="CSV File Import" position="(91.0, 291.0)" />
 		<node id="1" name="Corpus" qualified_name="orangecontrib.text.widgets.owcorpus.OWCorpus" project_name="Orange3-Text" version="" title="Corpus" position="(219.0, 295.0)" />
-		<node id="2" name="Preprocess Text" qualified_name="orangecontrib.text.widgets.owpreprocess.OWPreprocess" project_name="Orange3-Text" version="" title="Preprocess Text" position="(447.0, 84.0)" />
-		<node id="3" name="Word Cloud" qualified_name="orangecontrib.text.widgets.owwordcloud.OWWordCloud" project_name="Orange3-Text" version="" title="Word Cloud" position="(645.0, 85.0)" />
+		<node id="2" name="Preprocess Text" qualified_name="orangecontrib.text.widgets.owpreprocess.OWPreprocess" project_name="Orange3-Text" version="" title="Preprocess Text" position="(403.0, 150.0)" />
+		<node id="3" name="Word Cloud" qualified_name="orangecontrib.text.widgets.owwordcloud.OWWordCloud" project_name="Orange3-Text" version="" title="Word Cloud" position="(611.0, 73.0)" />
 		<node id="4" name="Sentiment Analysis" qualified_name="orangecontrib.text.widgets.owsentimentanalysis.OWSentimentAnalysis" project_name="Orange3-Text" version="" title="Sentiment Analysis" position="(381.0, 616.0)" />
-		<node id="5" name="Heat Map" qualified_name="Orange.widgets.visualize.owheatmap.OWHeatMap" project_name="Orange3" version="" title="Heat Map" position="(576.0, 607.0)" />
-		<node id="6" name="Corpus Viewer" qualified_name="orangecontrib.text.widgets.owcorpusviewer.OWCorpusViewer" project_name="Orange3-Text" version="" title="Corpus Viewer" position="(775.0, 614.0)" />
-		<node id="7" name="Similarity Hashing" qualified_name="orangecontrib.text.widgets.owsimhash.OWSimhash" project_name="Orange3-Text" version="" title="Similarity Hashing" position="(445.0, 308.0)" />
-		<node id="8" name="Distances" qualified_name="Orange.widgets.unsupervised.owdistances.OWDistances" project_name="Orange3" version="" title="Distances" position="(596.0, 451.0)" />
-		<node id="9" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Data Table" position="(686.0, 237.0)" />
-		<node id="10" name="Hierarchical Clustering" qualified_name="Orange.widgets.unsupervised.owhierarchicalclustering.OWHierarchicalClustering" project_name="Orange3" version="" title="Hierarchical Clustering" position="(767.0, 440.0)" />
+		<node id="5" name="Heat Map" qualified_name="Orange.widgets.visualize.owheatmap.OWHeatMap" project_name="Orange3" version="" title="Heat Map" position="(551.0, 640.0)" />
+		<node id="6" name="Corpus Viewer" qualified_name="orangecontrib.text.widgets.owcorpusviewer.OWCorpusViewer" project_name="Orange3-Text" version="" title="Corpus Viewer" position="(776.0, 631.0)" />
+		<node id="7" name="Similarity Hashing" qualified_name="orangecontrib.text.widgets.owsimhash.OWSimhash" project_name="Orange3-Text" version="" title="Similarity Hashing" position="(421.0, 385.0)" />
+		<node id="8" name="Distances" qualified_name="Orange.widgets.unsupervised.owdistances.OWDistances" project_name="Orange3" version="" title="Distances" position="(555.0, 488.0)" />
+		<node id="9" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Data Table" position="(694.0, 352.0)" />
+		<node id="10" name="Hierarchical Clustering" qualified_name="Orange.widgets.unsupervised.owhierarchicalclustering.OWHierarchicalClustering" project_name="Orange3" version="" title="Hierarchical Clustering" position="(736.0, 469.0)" />
+		<node id="11" name="Corpus to Network" qualified_name="orangecontrib.text.widgets.owcorpustonetwork.OWCorpusToNetwork" project_name="Orange3-Text" version="" title="Corpus to Network" position="(591.0, 191.0)" />
+		<node id="12" name="Network Explorer" qualified_name="orangecontrib.network.widgets.OWNxExplorer.OWNxExplorer" project_name="Orange3-Network" version="" title="Network Explorer" position="(777.0, 181.0)" />
 	</nodes>
 	<links>
 		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
@@ -24,12 +26,15 @@
 		<link id="7" source_node_id="7" sink_node_id="8" source_channel="Corpus" sink_channel="Data" enabled="true" source_channel_id="corpus" sink_channel_id="data" />
 		<link id="8" source_node_id="7" sink_node_id="9" source_channel="Corpus" sink_channel="Data" enabled="true" source_channel_id="corpus" sink_channel_id="data" />
 		<link id="9" source_node_id="8" sink_node_id="10" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="10" source_node_id="2" sink_node_id="11" source_channel="Corpus" sink_channel="Corpus" enabled="true" source_channel_id="corpus" sink_channel_id="corpus" />
+		<link id="11" source_node_id="11" sink_node_id="12" source_channel="Network" sink_channel="Network" enabled="true" source_channel_id="network" sink_channel_id="network" />
+		<link id="12" source_node_id="11" sink_node_id="12" source_channel="Node Data" sink_channel="Node Data" enabled="true" source_channel_id="items" sink_channel_id="node_data" />
 	</links>
 	<annotations />
 	<thumbnail />
 	<node_properties>
-		<properties node_id="0" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': '/Users/meetpatel/Desktop/COSC 422 Applied ML/Final Project (CPSC Data)/incident_descriptions_lithium.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': '/Users/meetpatel/Desktop/COSC 422 Applied ML/Final Project (CPSC Data)/incident_descriptions_batteries.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': '/Users/meetpatel/Desktop/COSC 422 Applied ML/Final Project (CPSC Data)/incident_descriptions.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': '/Users/meetpatel/Desktop/COSC 422 Applied ML/Final Project (CPSC Data)/preprocessed_file.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 33, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': '/Users/meetpatel/Desktop/COSC 422 Applied ML/Final Project (CPSC Data)', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x90\x00\x00\x010\x00\x00\x02\xe8\x00\x00\x02\xa7\x00\x00\x01\x90\x00\x00\x01L\x00\x00\x02\xe8\x00\x00\x02\xa7\x00\x00\x00\x00\x00\x00\x00\x00\x05\xa0\x00\x00\x01\x90\x00\x00\x01L\x00\x00\x02\xe8\x00\x00\x02\xa7', '__version__': 3}</properties>
-		<properties node_id="1" format="pickle">gASVHgQAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfZmlsZXOUXZQojEAv
+		<properties node_id="0" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': '/Users/meetpatel/Desktop/COSC 422 Applied ML/Final Project (CPSC Data)/incident_descriptions_lithium.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': '/Users/meetpatel/Desktop/COSC 422 Applied ML/Final Project (CPSC Data)/incident_descriptions_batteries.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': '/Users/meetpatel/Desktop/COSC 422 Applied ML/Final Project (CPSC Data)/incident_descriptions.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': '/Users/meetpatel/Desktop/COSC 422 Applied ML/Final Project (CPSC Data)/preprocessed_file.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 33, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': '/Users/meetpatel/Desktop/COSC 422 Applied ML/Final Project (CPSC Data)', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x90\x00\x00\x01/\x00\x00\x02\xe8\x00\x00\x02\xa6\x00\x00\x01\x90\x00\x00\x01K\x00\x00\x02\xe8\x00\x00\x02\xa6\x00\x00\x00\x00\x00\x00\x00\x00\x05\xa0\x00\x00\x01\x90\x00\x00\x01K\x00\x00\x02\xe8\x00\x00\x02\xa6', '__version__': 3}</properties>
+		<properties node_id="1" format="pickle">gASVQQQAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfZmlsZXOUXZQojEAv
 VXNlcnMvbWVldHBhdGVsL0Rlc2t0b3AvQ09TQyA0MjIgQXBwbGllZCBNTC9NZWV0UGF0ZWxSZXN1
 bWUudGFilIwRYm9vay1leGNlcnB0cy50YWKUjEAvVXNlcnMvbWVldHBhdGVsL0Rlc2t0b3AvQ09T
 QyA0MjIgQXBwbGllZCBNTC9NZWV0UGF0ZWxSZXN1bWUudHN2lIwYZ3JpbW0tdGFsZXMtc2VsZWN0
@@ -39,21 +44,22 @@ ANAAAAO4AAACaQAAAdMAAADsAAADuAAAAmkAAAAAAAAAAAWgAAAB0wAAAOwAAAO4AAACaZSMC19f
 dmVyc2lvbl9flEsBjBBjb250ZXh0X3NldHRpbmdzlF2UKIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdz
 lIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwIbGFuZ3VhZ2WUjAdFbmdsaXNolEr+////
 hpSMDnRpdGxlX3ZhcmlhYmxllE5K/v///4aUjAp1c2VkX2F0dHJzlF2UjBRJTkNJREVOVCBERVND
-UklQVElPTpRLZ4aUYUr9////hpRoDUsBdYwKYXR0cmlidXRlc5R9lIwFbWV0YXOUfZRoHksDc4wO
-ZG9jdW1lbnRzX2hhc2iUihEEYMp/HSOU4G2nK9YDujiwAGgXTnViaBIpgZR9lChoFX2UKGgXaBhK
-/v///4aUaBpOSv7///+GlGgcXZSMFElOQ0lERU5UIERFU0NSSVBUSU9OlEtnhpRhSv3///+GlGgN
-SwF1aCF9lGgjfZRoLEsDc2glihExDUeV4VYG2+zFzA1rD6jKAGgXTnViaBIpgZR9lChoFX2UKGgX
-jAdFbmdsaXNolEr+////hpRoGk5K/v///4aUaBxdlIwUaW5jaWRlbnRfZGVzY3JpcHRpb26US2eG
-lGFK/f///4aUaA1LAXVoIX2UaCN9lIwUaW5jaWRlbnRfZGVzY3JpcHRpb26USwNzaCWKEalCGeej
-fFQV5VBatLnn6/IAaBdOdWJoEimBlH2UKGgVfZQojAhsYW5ndWFnZZROSv7///+GlIwOdGl0bGVf
-dmFyaWFibGWUjARNZWV0lEtnhpSMCnVzZWRfYXR0cnOUXZRoREtnhpRhSv3///+GlGgNSwF1aCF9
-lGgjfZRoREsDc2glihHIXqRPqb55LEh+2ei8tIjdAGgXTnViZXUu
+UklQVElPTpRLZ4aUYUr9////hpRoDUsBdYwKYXR0cmlidXRlc5R9lIwFbWV0YXOUfZSMFElOQ0lE
+RU5UIERFU0NSSVBUSU9OlEsDc4wOZG9jdW1lbnRzX2hhc2iUihEEYMp/HSOU4G2nK9YDujiwAIwI
+bGFuZ3VhZ2WUTnViaBIpgZR9lChoFX2UKGgXTkr+////hpRoGowETWVldJRLZ4aUaBxdlGgsS2eG
+lGFK/f///4aUaA1LAXVoIX2UaCN9lIwETWVldJRLA3NoJooRyF6kT6m+eSxIftnovLSI3QBoJ051
+YmgSKYGUfZQoaBV9lCiMCGxhbmd1YWdllGgYSv7///+GlIwOdGl0bGVfdmFyaWFibGWUTkr+////
+hpSMCnVzZWRfYXR0cnOUXZSMFElOQ0lERU5UIERFU0NSSVBUSU9OlEtnhpRhSv3///+GlGgNSwF1
+aCF9lGgjfZRoPUsDc2gmihExDUeV4VYG2+zFzA1rD6jKAGgnTnViaBIpgZR9lChoFX2UKGg3jAdF
+bmdsaXNolEr+////hpRoOU5K/v///4aUaDtdlIwUaW5jaWRlbnRfZGVzY3JpcHRpb26US2eGlGFK
+/f///4aUaA1LAXVoIX2UaCN9lIwUaW5jaWRlbnRfZGVzY3JpcHRpb26USwNzaCaKEalCGeejfFQV
+5VBatLnn6/IAaCdOdWJldS4=
 </properties>
 		<properties node_id="2" format="literal">{'autocommit': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x1e\x00\x00\x00\x95\x00\x00\x04k\x00\x00\x02\xa4\x00\x00\x01\x1e\x00\x00\x00\xb1\x00\x00\x04k\x00\x00\x02\xa4\x00\x00\x00\x00\x00\x00\x00\x00\x05\xa0\x00\x00\x01\x1e\x00\x00\x00\xb1\x00\x00\x04k\x00\x00\x02\xa4', 'storedsettings': {'name': '', 'preprocessors': [('preprocess.transform', {}), ('preprocess.tokenize', {}), ('preprocess.filter', {})]}, '__version__': 3}</properties>
-		<properties node_id="3" format="pickle">gASVwAAAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
-lENCAdnQywADAAAAAAAAAAAAGQAABZ8AAANVAAAAAAAAADUAAAWfAAADVQAAAAACAAAABaAAAAAA
-AAAANQAABZ8AAANVlIwOc2VsZWN0ZWRfd29yZHOUj5QojARmaXJllJCMC3dvcmRzX2NvbG9ylIiM
-CndvcmRzX3RpbHSUSwOMC19fdmVyc2lvbl9flEsBdS4=
+		<properties node_id="3" format="pickle">gASVtwAAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lENCAdnQywADAAAAAAAAAAAAGQAABZ8AAANUAAAAAAAAADUAAAWfAAADVQAAAAACAAAABaAAAAAA
+AAAANQAABZ8AAANUlIwOc2VsZWN0ZWRfd29yZHOUj5SMC3dvcmRzX2NvbG9ylIiMCndvcmRzX3Rp
+bHSUSwOMC19fdmVyc2lvbl9flEsBdS4=
 </properties>
 		<properties node_id="4" format="literal">{'autocommit': True, 'controlAreaVisible': True, 'lilah_language': 'Slovenian', 'liu_language': 'English', 'method_idx': 1, 'multi_language': 'English', 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\xf2\x00\x00\x00\xd5\x00\x00\x03\x99\x00\x00\x02e\x00\x00\x01\xf2\x00\x00\x00\xf1\x00\x00\x03\x99\x00\x00\x02e\x00\x00\x00\x00\x02\x00\x00\x00\x05\xa0\x00\x00\x01\xf2\x00\x00\x00\xf1\x00\x00\x03\x99\x00\x00\x02e', 'senti_language': 'English', '__version__': 1}</properties>
 		<properties node_id="5" format="pickle">gASVmwMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMCGF2ZXJhZ2VzlIiMFWNvbF9jbHVzdGVyaW5n
@@ -136,6 +142,23 @@ SwKMCnNpbWhhc2hfNTOUSwKMCnNpbWhhc2hfNTSUSwKMCnNpbWhhc2hfNTWUSwKMCnNpbWhhc2hf
 NTaUSwKMCnNpbWhhc2hfNTeUSwKMCnNpbWhhc2hfNTiUSwKMCnNpbWhhc2hfNTmUSwKMCnNpbWhh
 c2hfNjCUSwKMCnNpbWhhc2hfNjGUSwKMCnNpbWhhc2hfNjKUSwKMCnNpbWhhc2hfNjOUSwKMCnNp
 bWhhc2hfNjSUSwJ1aGZ9lGhtSwNzdWJldS4=
+</properties>
+		<properties node_id="11" format="literal">{'controlAreaVisible': True, 'freq_threshold': 1, 'node_type': 1, 'savedWidgetGeometry': b"\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02.\x00\x00\x01\x0b\x00\x00\x03]\x00\x00\x02.\x00\x00\x02.\x00\x00\x01'\x00\x00\x03]\x00\x00\x02.\x00\x00\x00\x00\x02\x00\x00\x00\x05\xa0\x00\x00\x02.\x00\x00\x01'\x00\x00\x03]\x00\x00\x02.", 'threshold': 1, 'window_size': 100, '__version__': 1}</properties>
+		<properties node_id="12" format="pickle">gASVJgMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjA5sYXlv
+dXRfZGVuc2l0eZRLA4wJbWFya19ob3BzlEsBjA1tYXJrX21heF9jb25ulEsFjA1tYXJrX21pbl9j
+b25ulEsFjA5tYXJrX21vc3RfY29ubpRLAYwPb2JzZXJ2ZV93ZWlnaHRzlImME3NhdmVkV2lkZ2V0
+R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAAAAAAAAAAAFnwAAA4MAAAAAAAAAAAAABZ8AAAODAAAAAAAE
+AAAFoAAAAAAAAAAAAAAFnwAAA4OUjAlzZWxlY3Rpb26UTowPdmlzdWFsX3NldHRpbmdzlH2UjAVn
+cmFwaJR9lCiMC2FscGhhX3ZhbHVllEuAjA1jbGFzc19kZW5zaXR5lImMCmVkZ2Vfd2lkdGiUSwOM
+C2ppdHRlcl9zaXpllEsAjBNsYWJlbF9vbmx5X3NlbGVjdGVklImMFGxhYmVsX3NlbGVjdGVkX2Vk
+Z2VzlIiMC3BvaW50X3dpZHRolEsKjBRyZWxhdGl2ZV9lZGdlX3dpZHRoc5SIjBFzaG93X2VkZ2Vf
+d2VpZ2h0c5SJjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiHWMC19fdmVyc2lvbl9flEsBjBBj
+b250ZXh0X3NldHRpbmdzlF2UKIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmB
+lH2UKIwGdmFsdWVzlH2UKIwKYXR0cl9jb2xvcpROSv7///+GlIwKYXR0cl9sYWJlbJROSv7///+G
+lIwKYXR0cl9zaGFwZZROSv7///+GlIwJYXR0cl9zaXpllIwOd29yZF9mcmVxdWVuY3mUS2aGlGgO
+fZRoG0sBdYwKYXR0cmlidXRlc5R9lGgsSwJzjAVtZXRhc5R9lIwEd29yZJRLA3N1YmggKYGUfZQo
+aCN9lChoJU5K/v///4aUaCeMBWxhYmVslEtnhpRoKU5K/v///4aUaCtOSv7///+GlGgOfZRoG0sB
+dWgvfZRoMX2UaDhLA3N1YmV1Lg==
 </properties>
 	</node_properties>
 	<session_state>
